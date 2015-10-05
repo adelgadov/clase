@@ -26,7 +26,9 @@ Porcentaje de disponibilidad.
  * P. Disponibilidad = 25.920
  * P. Disponibilidad = 99.67 %
 
-[gimmick: math]()
+
+[gimmick:math]()
+
 
 MTBF:
 
@@ -34,7 +36,7 @@ MTBF:
 
  * MTBF = 25.920 minutos.
 
-\\( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\)
+Diameter \\( d \\) of a circle given area \\( A \\) can by obtained via \\(d=\sqrt{\frac{4A}{\pi}}\\)
 
 MTTF:
 

@@ -41,8 +41,12 @@ Ejercicio 1
 [gimmick:math]()
 **Porcentaje de disponibilidad**
 
+´´´math
+
  * $$ P. Disponibilidad = 25.920x =  129.515 \ \* \ 100 $$
  * $$ P. Disponibilidad = 99.93 \% $$
+
+´´´
 
 **MTBF:** 
 

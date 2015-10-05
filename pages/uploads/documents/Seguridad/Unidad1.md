@@ -27,6 +27,7 @@ Porcentaje de disponibilidad.
  * P. Disponibilidad = 99.67 %
 
 [gimmick: math]()
+
 MTBF:
 
  * $$ MTBF = \frac{3*30*24*60}{/5} $$

@@ -44,14 +44,11 @@ Ejercicio 1
  * $$ P. Disponibilidad = 25.920x =  129.515 \ \* \ 100 $$
  * $$ P. Disponibilidad = 99.93 \% $$
 
-Here is an example MathJax inline rendering \\( 1/x^{2} \\), and here is a block rendering: 
-\\[ \frac{1}{n^{2}} \\]
-
 **MTBF:** 
 
 
- * $$ MTBF = \frac{3 \ \* \ 30 \ \* \ 24 \ \* \ 60}{5} $$
- * $$ MTBF = 25.920 \ minutos $$
+ $$ MTBF = \frac{3 \ \* \ 30 \ \* \ 24 \ \* \ 60}{5} $$
+ $$ MTBF = 25.920 \ minutos $$
 
 
 **MTTF:**

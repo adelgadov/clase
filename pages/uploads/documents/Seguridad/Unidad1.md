@@ -34,19 +34,8 @@ MTBF:
 
  * MTBF = 25.920 minutos.
 
-   $$ MTBD = \frac{3 * 30 * 24 * 60}{5} $$
+$$ MTBD = \frac{3 * 30 * 24 * 60}{5} $$
 
-```math
-
-\begin{align}
-\frac{\partial^2 \phi}{\partial x^2} \vert_0
-& = \frac{1}{\Delta x} (\frac{\partial \phi}{\partial x} \vert_{\frac{1}{2}} - \frac{\partial \phi}{\partial x} \vert_b) \\
-& = \frac{1}{4\Delta x^2}[(\phi_0+\phi_1-2\phi_b+\phi_2-\phi_0)-8(\phi_0-\phi_b)] \\
-& = \frac{1}{4\Delta x^2}(-8\phi_0+\phi_1+\phi_2+6\phi_b)
-\end{align}
-\]
-
-```
 
 MTTF:
 

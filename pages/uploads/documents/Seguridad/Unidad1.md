@@ -30,11 +30,11 @@ Porcentaje de disponibilidad.
 
 MTBF:
 
-$$ MTBF = \frac{3 * 30 * 24 * 60}{5} $$
+\\(  MTBF = \frac{3 * 30 * 24 * 60}{5} \\)
 
  * MTBF = 25.920 minutos.
 
-$$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
+\\( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\)
 
 MTTF:
 

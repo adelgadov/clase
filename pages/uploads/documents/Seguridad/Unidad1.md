@@ -26,10 +26,10 @@ Porcentaje de disponibilidad.
  * P. Disponibilidad = 25.920
  * P. Disponibilidad = 99.67 %
 
-
+[gimmick: math]()
 MTBF:
 
- * MTBF = 3*30*24*60/5
+ * $$MTBF = \frac{3*30*24*60}{/5}
  * MTBF = 25.920 minutos.
 
 MTTF:

@@ -41,22 +41,22 @@ Ejercicio 1
 [gimmick:math]()
 **Porcentaje de disponibilidad**
 
- * $$ P. Disponibilidad = 25.920x =  129.515 \ \* \ 100 $$
+ * $$ P. Disponibilidad = \frac{Tiempo \ caído \ \* \ 100}{Tiempo \ total} = 25.920x =  129.515 \ \* \ 100 $$
  * $$ P. Disponibilidad = 99.93 \% $$
 
 **MTBF:** 
 
 
- * $$ MTBF = \frac{3 \ \* \ 30 \ \* \ 24 \ \* \ 60}{5} $$
+ * $$ MTBF = \frac{Tiempo \ total}{nº fallos} = \frac{3 \ \* \ 30 \ \* \ 24 \ \* \ 60}{5} $$
  * $$ MTBF = 25.920 \ minutos $$
 
 
 **MTTF:**
 
- * $$ MTTF = \frac{129.600 \ \- \ (5 \ \* \ 3) \- \ 30 \ \- \ 40}{5} $$
+ * $$ MTTF = \frac{Tiempo \ funcionamiento \ correcto}{nº fallos} = \frac{129.600 \ \- \ (5 \ \* \ 3) \- \ 30 \ \- \ 40}{5} $$
  * $$ MTTF = 25.903 \ minutos $$
 
 **MTTR:**
 
- * $$ MTTR = \frac{(5 \ \* \ 3) \+ \ 30 \ \+ \ 40}{5} $$
+ * $$ MTTR = \frac{Tiempo \ inactividad}{nº fallos} = \frac{(5 \ \* \ 3) \+ \ 30 \ \+ \ 40}{5} $$
  * $$ MTTR = 17 \ minutos $$

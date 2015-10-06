@@ -107,4 +107,8 @@ La clasificación de seguridad se clasifican según su objetivo a proteger:
  * Seguridad pasiva: Son medidas para minimizar el daño producido por un ataque.
 
 
-Ejerc
+Ejercicio 2
+-----------
+
+Leer el siguiente artículo y realizar un resumen de 1 página y comentar 2 ataques habituales que hallas sufrido y clásificalos con los términos leídos.
+Propón técnicas de prevención.

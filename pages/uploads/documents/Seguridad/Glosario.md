@@ -14,8 +14,7 @@ El atacante nos redirige a una página falsa mediante el DNS para sacar nuestros
 Tabnabbing
 ----------
 
-
-
+Es una evolución del Phissing, el atacante detecta cuando cambiamos de pestaña en el navegador y cambiar el contenido de la web que estamos viendo por una copia fraudulenta como puede ser de Facebook, Gmail, etc. Al introducir nuestros datos en dicha página son robados.
 
 Malware
 ---------
@@ -41,5 +40,19 @@ Botnet
 -------
 
 
+Newbie
+-------
 
 
+Wannaber
+---------
+
+
+Lammer
+-------
+
+
+Luser
+-------
+
+Palabra despectiva con la cual los hackers se refieren a los lammer , wannaber, etc.

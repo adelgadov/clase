@@ -49,7 +49,14 @@ Sistema de almacenamiento que permite combinar un grupo de dispositivos independ
     * Gabinetes externos conectados a puertos SCASI, Fiber Channel, etc.
     * Gabinetes externos conectados en red(storage área network-SAN)
   * **Software:** Usa la CPU del ordenador para realizar las operaciones implementadas por el kernel.
-
+5. Es tolerante a fallas.
+ * Modo de degradación: El RAID está degradado cuando un disco falla.RAID 1, RAID 5, RAID 1 0, RAID 5 0, RAID 6 0.
+ * Hot spares: Niveles de redundancia que permite que el RAID se recupere por si mismo.
+ 	* Soporte en hardware y software.
+ 	* Dispositivos en stand by esperando un falla para ocupar su lugar.
+ 	* El RAID se degrada mientras hot spares actúa.
+ * Hot swap: Sistemas redundantes que permiten que en el RAID se quiten dispositivos en caliente cuando han fallado.
+ 
 5. Niveles de RAID
  * **Striping:** Técnica de segmentación lógica de la información. Divide los datos entre los discos duros.
  * **Mirroring:** Creanréplicas en tiempo real de un dispositivo en otros. Ofrece alta disponibilidad de los datos (redundancia).
@@ -133,7 +140,7 @@ Sistema de almacenamiento que permite combinar un grupo de dispositivos independ
     \\( c  \ \ \ \ c   \ \ \ \ d  \ \ \ \ d \\)
 
 
-* ** RAID 5 0 (striping & parity**:
+* ** RAID 5 0 (striping & parity)**:
 	- En refencia al RAID 1 0:
 		- Menor costo.
 		- Rendimiento de lectura más bajo.
@@ -151,3 +158,63 @@ Sistema de almacenamiento que permite combinar un grupo de dispositivos independ
 		- Cada RAID 6 puede soportar la falla de 2 discos.
 	\\( a  \ \ \ \ b  \ \ \ \ X_1  \ \ \ \ Y_1  \ \ \ \ c  \ \ \ \ d  \ \ \ \ X_1  \ \ \ \ Y_1  \\)
     \\( e  \ \ \ \ X_2   \ \ \ \ Y_2  \ \ \ \ f \ \ \ \ g  \ \ \ \ X_2   \ \ \ \ Y_2  \ \ \ \ h \\)
+    
+    
+* **Ejemplo bit de paridad**:
+
+	\\( 1  \ \ \ \ 2  \ \ \ \ P0 \\)
+	\\( 3  \ \ \ \ 4  \ \ \ \ P1 \\)
+	\\( 5  \ \ \ \ 6  \ \ \ \ P2 \\)
+	
+	Segmento 1: Función XOR
+	
+	Dispositivo 1: \\( 0 \ 1 \ 1 \ 0 \ 1 \ 1 \ 0 \ 1  \\)
+	Dispositivo 2: \\( 1 \ 1 \ 0 \ 1 \ 0 \ 1 \ 0 \ 0  \\)
+	Paridad: \\( \ \ \ \ \ \ \ \ 1 \ 0 \ 1 \ 1 \ 1 \ 0 \ 0 \ 1  \\)
+	
+
+Discos básicos y dinámicos
+--------------------------
+ * **Discos básicos**:
+  - Un disco básico se puede dividir en una o más particiones.
+  - Para usar una partición, hay que formatearla y asignarla una unidad. Una vez formateada se llama volumen básico.
+  - Soporta 3 particiones primarias y una extendida.
+  
+ * **Discos dinámicos**:
+  - Un disco dinámico se divide en volúmenes.
+  - Se formatea y se le asigna una unidad antes de usarlo.
+  - Tipos:
+  	- Volúmenes simples.
+  	- Volúmenes distribuídos.
+  	- Volúmenes seccionados.
+  	- Volúmenes reflejados.
+  	- Volúmenes reflejados.
+  	- Volúmenes seccionados tolerante a fallos.
+  	
+Para convertir discos básicos a dinmámicos se puede realizar de forma manual o con el administrador de discos. Cuando pasas de básico a dinámico se mantiene la información, de dinámico a básico se pierde la información. Los volúmenes creados en discos dinámicos se llaman "Volúmenes dinámicos"
+ 
+ * **Volúmenes simples:**
+	- Son los que están limitados a un disco.
+	- Son la base para extender el espacio de almacenamiento para la creación de un sistema tolerante a fallos.
+	- se pueden extender a zonas contiguas o no contiguas dle disco dinámico.
+	
+ * **Volúmenes distribuídos:** 
+	- Puede ocupar zonas no contiguas en hasta 32 discos.
+	- Debe de estár formateado en NTFS.
+	- No existen ventajas en rendimiento.
+	- La escritura es secuencial, primero se llena un disco, luego otro...
+	 
+ * **Volumen seccionado:**:
+	- Combinan zonas distribuídas entre varios discos.
+	- Ofrece un rendimiento lectura/escritura superior.
+	- No es tolerante fallos.
+	- Los datos se dividen en trozos de 64kb a unos megas y se llenan los discos de forma simultánea.
+	
+ * **Volumen reflejado:**
+  - Combina 2 o más discos.
+  - Es tolerante a fallos.
+  - Cuando un disco falla, el disco de backup empieza a regenerarse y, si no lo  tiene, se regenera cuando insertemos un disco.
+ 
+ * ** Volumen seccionado tolerante a fallos**:
+  - Mínimo 3 discos.
+  - Tolerante a fallos con bit de paridad.

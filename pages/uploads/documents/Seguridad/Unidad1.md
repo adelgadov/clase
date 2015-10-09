@@ -1,17 +1,22 @@
-
 Unidad 1
 ========
 
 Introducción
 ------------
 
-Para que un sistema sea seguro debe cumplir las siguientes características:
+No es posible garantizar una seguridad total, para asegurar la máxima seguridad se tienen que cumplir estás reglas:
 
  * La confidencialidad asegura el acceso a la información únicamente a aquellas personas que cuenten con la debida autorización.
  * La integridad de un mensaje garantiza que el contenido del mensaje no ha sido alterado.
  * La disponibilidad significa que un archivo tiene que estar disponible siempre.
  * No repudio, mecanismo en origen y destino, es como el acuse de recibo.
 
+Objetivos de la seguridad informática
+-------------------------------------
+
+ * Detectar posibles problemas y amenazas.
+ * Garantizar adecuada utilización de recursos.
+ * Limitar pérdidas y conseguir recuperación.
 
 
 **Porcentaje de disponibilidad**
@@ -67,28 +72,30 @@ Vulnerabilidades y amenazas
 
 El elemento más vulnerable determina la seguridad de un sistema, los datos son los principales a proteger dado que son difíciles de recuperar. Hay varias clasificaciones del nível de seguridad:
 
- * Seguridad pasiva: Se instaura una vez producido el ataque, antiincendias, proteger CPD, proteger las copias de seguridad, etc.
- * Seguridad lógica: Control del software, sistemas opeartivos, usuarios, contraseñas, redes(ssh, ssl, etc), seguridad perimetral, etc.
- * Alta disponibilidad: Ante la caída de un servicio poder seguir accediendo sus datos. Separar servidores, virtualizar, duplicar, etc.
- * LSSICE: Ley de servicios de la sociedad de la información y de comercio electrónico.
+ * **Seguridad pasiva:** Se instaura una vez producido el ataque, antiincendias, proteger CPD, proteger las copias de seguridad, etc.
+ * **Seguridad lógica:** Control del software, sistemas opeartivos, usuarios, contraseñas, redes(ssh, ssl, etc), seguridad perimetral, etc.
+ * **Seguridad en redes corporativas:** El uso de protocolos de comunicación seguros.
+ * **Alta disponibilidad:** Ante la caída de un servicio poder seguir accediendo sus datos. Separar servidores, virtualizar, duplicar, etc.
+ * **LSSICE:** Ley de servicios de la sociedad de la información y de comercio electrónico.
 
 Las amenazas por personas se clasifican en:
 
- * Personas:
-   - Internas: Un empleado rompe algo sin darse cuenta.
-   - Hacker: Robos de información, etc.
- * Amenazas físicas: Afectan al hardware.
- * Amenazas lógicas: Afectan al software, por ejemplo inyectando código. No tiene por que ir a robar, suelen destruir algo.
+ * **Personas:**
+   - **Internas:** Un empleado rompe algo sin darse cuenta.
+   - **Hacker:** Robos de información, etc.
+ * **Amenazas físicas:** Afectan al hardware.
+ * **Amenazas lógicas:** Afectan al software, por ejemplo inyectando código. No tiene por que ir a robar, suelen destruir algo.
+ * **Técnicas de ataque:** Mirar el glosario. 
 
 Auditar seguridad
 ------------------
 
 Es un estudio que suelen realizar grandes empresas de auditoría de los sistemas y las comunicaciones en el que se analizan todos los equipos, todos los sistemay las comunicaciones que usa la empresa, se realizan una serie de pruebas para vulnerabilidades y fallos y se emite un informe de vulnerabilidades y recomienda una serie de medidas a adoptar para minimizar el riesgo de intrusión. Los tipos de auditoría son:
 
- * Auditoría de seguridad interna
- * Auditoría de seguridad perimetral
- * Auditoría de seguridad forense
- * Auditoría de seguridad del código de las aplicaciones
+ * Auditoría de seguridad interna: Controlar posibles accesos no autorizados a la información por parte de los empleados.
+ * Auditoría de seguridad perimetral: Controlar las redes y posibles intrusiones externas
+ * Auditoría de seguridad forense: Cuando se ha producido el ataque ver que se ha pasado.
+ * Auditoría de seguridad del código de las aplicaciones: Controlar las aplicaciones no ejecuten otras funciones.
 
 En la auditoría existen los siguientes estándares:
 

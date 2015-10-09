@@ -1,6 +1,6 @@
 #WikiClase
 
-[GitHub](https://github.com/adelgadov/clase/tree/gh-pages)
+
 [BBDD]()
 	
 * [Unidad 1]()

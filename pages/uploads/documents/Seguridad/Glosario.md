@@ -21,7 +21,7 @@ Malware
 
 
 Sniffing
----------
+--------
 
 
 Spoffing
@@ -56,3 +56,73 @@ Luser
 -------
 
 Palabra despectiva con la cual los hackers se refieren a los lammer , wannaber, etc.
+
+Dumpster diving
+---------------
+
+Sniffing
+-----------
+
+ARP Poissoning
+--------------
+
+Bit-Flipping
+-------------
+
+Insiders Trading
+-----------------
+
+troyanos
+----------
+
+Gusanos
+---------
+
+Virus informáticos
+--------------------
+
+Spyware
+---------
+
+Backdoors
+----------
+
+
+Rootkits
+---------- 
+ 
+Keyloggers
+---------
+
+Payload
+--------
+
+Heurística
+-----------
+
+Cracking
+----------
+
+Fuerza bruta
+------------
+
+Exploit
+--------
+
+Hardening
+---------
+
+OSINT
+--------
+
+Scanning
+--------
+
+Banner grabbing
+---------------
+
+DNS lookup
+----------
+
+Traceroute
+------------

@@ -66,6 +66,85 @@ Almacenamiento redundante y distribuído.
   - **Datos**: Deben contar con réplica de los datos del principal, podrá ser síncrona o asíncrona.
     - **Síncrona:** Según se modifican los datos en el principal se actualizan estos.
     - **Asíncrona:** Se programan las copias de la información.
+
+Centro de proceso de datos (CPD)
+----------------------------
+
+Ubicación donde se concentran los recursos necesarios para procesar la información. Garantiza la continuidad y disponibilidad del servicio mediante:
+
+ * Disponibilidad y monitorización. Los tipos de monitorización son:
+  - 24x7(x365)
+  - 5x8
+  - NBD: Next Business Day
+ * Fiabilidad.
+ * Seguridad, redundancia y diversificación.
+ * Control ambiental y prevención de incendios.
+  - Condiciones: 21ºC-23 ºC con una humedad de entra el 40% y el 60%.
   
-Práctica 5:
------------
+ 
+Suelen tener centros de respaldo, debe estar a una distancia física para que en caso de una contingencia no afecte a ambos CPDS.
+
+Para determinar la mejor ubicación y el acondicionamiento de un CPD tenemos que contemplar lo siguiente.
+ 
+ * Incendios.
+ * Temperatura y humedad.
+ * Inundaciones y terremotos.
+ * Rayos e interferencias electromagnéticas.
+ 
+Control de acceso físicos
+--------------------------
+
+El uso de credenciales es uno de los sistemas de seguridad más importantes. Se puede indentificar por:
+ 
+ * Algo que se posee: tarjeta, llave, etc.
+ * Algo que se sabe: Contraseña.
+ * Algo que se es: Biométrico.
+ 
+Sistemas de acceso biométrico:
+ 
+ * Ojo (Iris)
+ * Ojo (Retina)
+ * Huellas dactilares.
+ * Vascular dedo.
+ * Vascular mano
+ * Geometría de la mano.
+ * Escritura y forma.
+ * Voz: Menor fiabilidad.
+ * Cara 2D.
+ * Cara 3D.
+ 
+Circuito cerra de televisión (CCTV)
+-----------------------------
+
+Permite el control de lo que sucede en la planta donde están instaladas las cámaras. Fuerte penetración en el mercado basado en las cámaras IP, por su bajo coste, sus prestacones y su gestión por LAN.
+
+Sistemas de alimentación ininterrumpido (SAI)
+------------------------------------------
+
+Dispositivo dotado de baterías que proporciona electicidad a los dispositivos conectados durante una caída de la red eléctrica. Además, mejora la calidada de la electricida ante posibles picos o bajadas de tensión.
+
+ * Tipo y número de conectores: Los conectores de alimentación de la caraga se diferencian en IEC Y Schucko, existen tomas que filtra variaciones de la señal(Impresora, fax, etc).
+ * Otras conecxiones: Conectores de protección de líneas de datos RJ11-RJ45. Conexiones seriales.
+ * Tipo de funcionamiento solo o con batería.
+ 
+ 
+###Tipos de SAI
+
+ * SAI off-line: No estabiliza la señal, simplemente alimenta cuando no hay señal eléctrica.
+ * SAI In-line: Estabiliza la señal y alimenta los dispositivos en caso de caída de la red.
+ * SAI On-line: Hace un mayor filtrado de la señal.
+ * Estabilizador: Solo estabiliza la señal.
+ 
+###Potencia necesaria: 
+
+[gimmick:math]()
+
+ * CA: potencia eficaz/aparente/efectiva(VA)
+ * VA(Potencia aparente): Potencia real(W) x 1.4
+
+###Métodos de cálculo
+
+ * Medidor de potencia.
+ * Lo proporciona el fabricante.
+ * Estimación de consumo (Energy Star)
+

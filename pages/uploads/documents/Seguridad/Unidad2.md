@@ -140,7 +140,8 @@ Dispositivo dotado de baterías que proporciona electicidad a los dispositivos c
 [gimmick:math]()
 
  * CA: potencia eficaz/aparente/efectiva(VA)
- * VA(Potencia aparente): Potencia real(W) x 1.4
+ * $$ CC: potencia = V(Voltio) * I(Intensidad(Ampraje)) $$
+ * $$ VA(Potencia \ aparente): Potencia real(W) * 1.4 $$
 
 ###Métodos de cálculo
 

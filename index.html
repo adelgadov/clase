@@ -38,7 +38,7 @@ function comprobar () {
     var password = $("clase-user").value;
 
     if(md5(password) == "b264a3be212c92a48d7f4ef25d75c9c4") {
-        $.cookie("clase-user", md5(pass), { expires : 7 });
+        $.cookie("clase-user", md5(password), { expires : 7 });
         location.reload();
 
     }

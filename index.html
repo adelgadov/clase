@@ -55,16 +55,14 @@
         }
         function comprobar () {
             var password = $("#inputPassword").val();
+            password = md5(password);
 
-
-            if(md5(password) == "b264a3be212c92a48d7f4ef25d75c9c4") {
-                $.cookie("clase-user", md5(password), { expires : 7 });
+            if(password == "b264a3be212c92a48d7f4ef25d75c9c4") {
+                $.cookie("clase-user", password, { expires : 7 });
                 location.reload();
 
             }
-            else {
                 document.location.replace("http://www.pampling.com/mail/nopuedes.jpg");
-            }
 
         }
     </script>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <!--
    This is MDwiki v0.6.2
    (C) 2013 by Timo Dörr and contributors. This software is licensed
@@ -8,6 +9,7 @@
    See http://github.com/Dynalon/mdwiki for a copy of the source code.
 -->
 <head>
+
     <title>WikiClase</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" type="text/css"></link>
     <link rel="stylesheet" href="//yandex.st/highlightjs/7.3/styles/github.min.css" type="text/css"></link>
@@ -18,25 +20,33 @@
     <script src="pages/uploads/documents/js/jquery.cookie.js" type="text/javascript"></script>
 
     <script>
-
-        if ($.cookie('user') == "b264a3be212c92a48d7f4ef25d75c9c4") {
+              function doAuthentication(user, pass) {
+            //do authentication
+        }
+        if ($.cookie('clase-user') == "b264a3be212c92a48d7f4ef25d75c9c4") {
 
         }
 
         else{
-
-            var pass = prompt("Contraseña: ");
-
-            if (md5(pass) == "b264a3be212c92a48d7f4ef25d75c9c4") {
-                $.cookie("user", md5(pass), { expires : 15 });
-            }
-            else {
-                document.location.replace("http://www.pampling.com/mail/nopuedes.jpg");
-            }
+            $(document).ready(function() {
+                document.body.innerHTML = '<input type="password" name="clase-user"  id="clase-user"><input type="button" onclick="comprobar()">';
+            })
 
 
         }
+function comprobar () {
+    var password = $("clase-user").value;
 
+    if(md5(password) == "b264a3be212c92a48d7f4ef25d75c9c4") {
+        $.cookie("clase-user", md5(pass), { expires : 7 });
+        location.reload();
+
+    }
+    else {
+        document.location.replace("http://www.pampling.com/mail/nopuedes.jpg");
+    }
+
+}
 
 
 

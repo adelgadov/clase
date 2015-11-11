@@ -40,3 +40,18 @@ Se recomienda:
  * No decir la contraseña a nadie, no escribirla en equipos.
  * Cambiar las contraseñas con regularidad.
 
+
+Distribuciones live
+-------------------
+
+Los sistemas operativos arrancables desde unidades externas incluyen aplicaciones de recuperación de datos y contrasñas:
+ * Ultimate boot CD
+ * Backtrack
+ * Ophcrack
+ * Slax
+ * Wifiway y Wifislax
+ 
+BIOS
+-----------
+
+La forma de protegerla es un usuario de la BIOS o un usuario de arranque del sistema el cual nos pedirá cuando arranquemos el equipo.

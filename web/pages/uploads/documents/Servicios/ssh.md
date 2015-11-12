@@ -4,10 +4,10 @@ SSH
 Comandos
 ----------
 
- * apt-get install open_ssh-server: Instalación servidor ssh
- * Who(W): Para saber quienes están en nuestro servidor ssh.
- * ll /etc/ssh/: Para saber el algoritmo que tenemos en el pc (DSA/RSA).
- * ssh-keygen -l -f ssh_host_key: Es para saber la huella de nuestra clave pública, tienes que estar en /etc/ssh para ejecutarlo.
+ * **apt-get install open_ssh-server:** Instalación servidor ssh
+ * **Who(W):** Para saber quienes están en nuestro servidor ssh.
+ * **ll /etc/ssh/:** Para saber el algoritmo que tenemos en el pc (DSA/RSA).
+ * **ssh-keygen -l -f ssh_host_key:** Es para saber la huella de nuestra clave pública, tienes que estar en /etc/ssh para ejecutarlo.
  
  ```bash
      root@teide-System-Product-Name:/home/teide# cd /etc/ssh
@@ -15,7 +15,7 @@ Comandos
      2048 17:9f:a0:d3:f5:3f:ab:91:f6:a4:2d:e4:07:7d:9a:c6  root@teide-System-Product-Name (RSA)
  ```
  
- * ssh-keygen -t rsa: Sirve para generar nuestras claves.
+ * **ssh-keygen -t rsa:** Sirve para generar nuestras claves.
 
  ```bash
      root@teide-System-Product-Name:~/.ssh# ssh-keygen -t rsa
@@ -45,7 +45,7 @@ Comandos
 
 Para que el cliente con putty pueda conectarse, primero nuestro servidor tiene que reconocer que esta contraseña es la nueva contraseña, por lo tanto debemos decírselo en el archivo de configuración.
 
-* gedit /etc/ssh/sshd_config: Hacemos las siguientes modificaciones:
+* **gedit /etc/ssh/sshd_config:** Hacemos las siguientes modificaciones:
     - Añadimos: HostKey /etc/ssh/ClaveGabrielRsaOct2015
     - Borramos:
      - \#HostKey /etc/ssh/ssh_host_dsa_key
@@ -53,7 +53,7 @@ Para que el cliente con putty pueda conectarse, primero nuestro servidor tiene q
      - \#HostKey /etc/ssh/ssh_host_ed25519_key
 
 
- * /etc/init.d/ssh restart: Reiniciamos el servicio para que aceptes los cambios producidos en el archivo de configuración.
+ * **/etc/init.d/ssh restart:** Reiniciamos el servicio para que aceptes los cambios producidos en el archivo de configuración.
 
 ###Para desconectar usuarios
  
@@ -86,8 +86,8 @@ Para que el cliente con putty pueda conectarse, primero nuestro servidor tiene q
 Ubicaciones
 --------------
  
-  * Clave pública: /etc/ssh/SSH_HOST_DSA_KEY.PUB
-  * Clave privada: /etc/ssh/SSH_HOST_DSA_KEY
+  * **Clave pública:** /etc/ssh/SSH_HOST_DSA_KEY.PUB
+  * **Clave privada:** /etc/ssh/SSH_HOST_DSA_KEY
   
 Cliente
 ---------
@@ -97,6 +97,6 @@ Cliente
  * ssh usuario@ip
 * Si el servidor ha cambiado la clave pública, el cliente tiene que borrar su caché de claves para poder conectarse.
  
- * rm /root/.ssh/known_hosts: Borra todas las claves de todos los servidores que hemos almacenado
- * ssh-keygen -R “ip del host": Borra la clave de un servidor en concreto.
+ * **rm /root/.ssh/known_hosts:** Borra todas las claves de todos los servidores que hemos almacenado
+ * **ssh-keygen -R “ip del host":** Borra la clave de un servidor en concreto.
 

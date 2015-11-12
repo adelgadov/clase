@@ -12,6 +12,7 @@
 [Servicios]()
 
 * [ssh](pages/uploads/documents/Servicios/ssh.md)
+* [dhcp](pages/uploads/documents/Servicios/dhcp.md)
 
 [Sistemas]()
 

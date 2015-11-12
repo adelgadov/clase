@@ -55,3 +55,14 @@ BIOS
 -----------
 
 La forma de protegerla es un usuario de la BIOS o un usuario de arranque del sistema el cual nos pedirá cuando arranquemos el equipo.
+
+
+Política de usuarios y grupos
+-----------------------------
+
+La definición de cuentas de usuario y asignación de perfiles es un aspecto fundamental de la seguridad:
+
+ * Definición de puestos.
+ * Determinación de la sensibilidad del puesto.
+ * Elección de la persona para cada puesto.
+ * Formación inicial y continua de los usuarios

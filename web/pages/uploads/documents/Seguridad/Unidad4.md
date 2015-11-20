@@ -36,3 +36,27 @@ Métodos de infección.
  * Por un archivo malicioso.
  * Dispositivos extraíbles.
  * Cookies maliciosas.
+ 
+Protección y desinfección
+-------------------------
+ * Mantenerse informado sobre las novedades y las alertas de seguridad.
+ * Actualizar el equipo informático.
+ * Hacer copias de seguridad con cierta frecuencia.
+ * Utilizar software legal con garantía y soporte.
+ * Utilizar contraseñas fuertes en todos los servicios.
+ * Crear diferentes usuarios en el sistema, cada uno de ellos con los permisos mínimos necesarios para poder realizar las acciones permitidas.
+ * Utilizar herramientas de seguridad para proteger y reparar el equipo frente a las amenazas de la red.
+ * Analizar el sistema de ficheros con varias herramientas.
+ * Realizar periódicamente escaneo de puertos, test de velocidad y de las conexiones de red para analizar si las aplicaciones que las emplean son autorizadas.
+ * No fiarse de las herramientas antimalware descargables de manera gratuita desde Internet.
+ 
+Clasificación antimalware
+----------------------------
+
+Las herramientas antimalware se encuentran más desarrolladas para entornos más utilizados por usuarios no experimentados y por tanto más vulnerables, usualmente entornos Windows. Antivirus:
+ 
+ * **Antivirus de escritorio:** Instalado como aplicación.
+ * **Antivirus en línea:** Análisis del equipo mediante la instalación de plugins en el navegador.
+ * **Análisis de ficheros en línea:** Servicio gratuito para análisis de ficheros sospechosos  mediante el uso de múltiples motores antivirus.
+ * **Antivirus portable:** No requieren instalación en el sistema y consumen una pequeña cantidad de recursos.
+ * **Antivirus Live:** Arrancable y ejecutable desde una unidad extraíble.

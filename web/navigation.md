@@ -14,6 +14,7 @@
 
 * [ssh](pages/uploads/documents/Servicios/ssh.md)
 * [dhcp](pages/uploads/documents/Servicios/dhcp.md)
+* [dns](pages/uploads/documents/Servicios/dns.md)
 
 [Sistemas]()
 
@@ -27,6 +28,7 @@
 * [Unidad 2](pages/uploads/documents/Seguridad/Unidad2.md)
 * [Unidad 3](pages/uploads/documents/Seguridad/Unidad3.md)
 * [Unidad 4](pages/uploads/documents/Seguridad/Unidad4.md)
+* [Unidad 5](pages/uploads/documents/Seguridad/Unidad5.md)
 * [Glosario](pages/uploads/documents/Seguridad/Glosario.md)
 
 [Inglés]()

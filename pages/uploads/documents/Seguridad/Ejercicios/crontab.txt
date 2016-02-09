@@ -1,0 +1,25 @@
+#!/bin/bash
+# script de copia completa e incremental
+# Modificar directorios a respaldar y destino del Backup
+DIRECTORIOS="/bin /boot /etc /initrd /home /lib /opt /root/ sbin /srv /usr /var"
+# Directorio donde se guardar el backup
+BACKUPDIR=/home/Backups
+# Directorio que guarda la fecha del £ltimpo backup completo
+FECHADIR=/home/Backups
+DSEM='date+ %a' # D¡a de la semana
+DMES='date + %d' # D¡a del mes
+DYM='date +%d%b' # D¡a y mes
+# "NUEVO" coge la fecha del backup completo de cada domingo
+# Backup mensual completo - Sobrescribe el del mes anterior
+
+if [ $DMES = "dom" ]; then
+AHORA='date +%d-%b'
+echo $AHORA > $FECHADIR/fecha-backup-completo
+tar -cf $BACKUPDIR/CTS_$DESM.tar $DIRECTORIOS
+
+# Backup incremental diario - sobrescribe semana anterior
+# Obtiene fecha del £ltimo backup completo, opcion newer.
+else
+NUEVO="--newer='cat $FECHADIR/fecha-backup-completo'"
+tar $NUEVO -cf $BACKUPDIR/ID_$DSEM.tar $DIRECTORIOS
+fi

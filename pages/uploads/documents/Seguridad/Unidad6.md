@@ -138,3 +138,35 @@ Los sistemas de cifrado más utilizados en redes inalámbricas son:
   - WPA personal: Autenticación mediante clave precompartida.
  * WPA integra TKIP, protocolo de integridad de clave temporal, que cambia claves dinámicamente a medida que el sistema es utilizado. También es posible utilizar cifrado simétrico AES para aportar mayor nivel de seguridad en el cifrado.
  
+ Firewall
+ --------------
+ 
+ Iptables
+ -----------
+ 
+  * Las reglas se agrupan en cadenas, predefinidas o definidas por el usuario:
+  - Input: Paquetes que entran al sistema.
+  - Output: Paquetes que salen del sistema.
+  - Forward: Paquetes que pasan por el sistema
+ * Las cedenas se agrupan en tablas, cada tabla está asociada a un tipo de procesamiento de paquetes:
+  - Filter table: responsable de bloquear o  permitir un paquete. Contiene cadenas predefinidas para paquetes input, output, forward.
+  - Nat table: Responsable de configurar las reglas de reescritura de direcciones o puertos de los paquetes. Contiene cadenas predefinidas para.
+   * PREROUTING: Entran los paquetes entrantes antes de qure se consulte la tabla de ruteo local.
+   * POSTROUTING: Pasan los paquetes salientes después de la decisión de ruteo.
+   * OUTPUT: Limita el NAT a paquetes generados localmente.
+   * INPUT: Limita el NAT a paquetes destinados al sistema.
+  - Mangle table: Responsable de ajustar las opciones de los paquetes, como la calidad de servicio. Todos los paquetes pasan por esta tabla, contiene todos los tipos de cadenas predefinidas posibles.
+ 
+ ###Tipos de firewall
+ 
+ Según su ubicación:
+  * Firewalls basados en servidores: consta de una aplicación de firewall que se instala y ejecuta en un sistema operativo de red (NOS), que normalmente ofrece otra serie de servicios como enrutamiento, proxy, dns, dhcp, etc.
+  * Firewalls dedicados: son equipos que tienen instalada una aplicación especifica de cortafuegos.
+  * Firewalls integrados: se integran en un dispositivo hardware para ofrecer la funcionalidad de firewall. Como ejemplos encontramos switches o routers que integran funciones de cortafuegos.
+  * Firewalls personales: se instalan en los distintos equipos de la red de forma que los proteja individualmente de amenazas externas.
+ 
+ Arquitecturas de cortafuegos
+  * Screening router: Como frontera entre la red privada y la red pública se encuentra un router que realiza tareas de filtrado.
+  * Dual Homed-Host: se dispone un equipo servidor que realizará tareas de filtrado y enrutamiento mediante al menos 2 tarjetas de red, esto permitirá una mayor flexibilidad en la configuración e instalación de aplicaciones de seguridad.
+  * Screened Host: Combina un router como equipo fronterizo exterior y un servidor proxy que filtrará y permitirá añadir reglas de filtrado en la aplicaciones más empleadas.
+  * Screened-subnet: Mediante l creación de una subred intermedia, denominada DMZ o zona desmilitarizada, entre la red externa y la red privada interna, permitirá tener 2 niveles de seguridad, uno algo menor en el cortafuegos más externo y uno de mayor nivel de seguridad en el cortafuegos de acceso a la red interna.

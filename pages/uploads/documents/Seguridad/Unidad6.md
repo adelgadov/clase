@@ -138,35 +138,96 @@ Los sistemas de cifrado más utilizados en redes inalámbricas son:
   - WPA personal: Autenticación mediante clave precompartida.
  * WPA integra TKIP, protocolo de integridad de clave temporal, que cambia claves dinámicamente a medida que el sistema es utilizado. También es posible utilizar cifrado simétrico AES para aportar mayor nivel de seguridad en el cifrado.
  
- Firewall
- --------------
  
- Iptables
- -----------
+ * Cuando una red corporativa se encuentra interconectada a una red pública, los peligros de ataque a sus servidores, routers y sistemas internos se multiplican.
+ * Las medidas de seguridad perimetral suponen la primera línea de defensa entre las redes públicas y corporativas o privadas.
+ * Un cortafuego o firewall es una aplicación o dispositivo diseñado para bloquear comunicaciones no autorizadas.
  
-  * Las reglas se agrupan en cadenas, predefinidas o definidas por el usuario:
-  - Input: Paquetes que entran al sistema.
-  - Output: Paquetes que salen del sistema.
-  - Forward: Paquetes que pasan por el sistema
+La configuración para permitir y limitar el trafico entre diferentes redes o ámbitos de una red se realiza en base a un conjunto de normas y reglas. Sus características fundamentales son:
+ 
+ *	Filtrado de paquetes: de red en función de la inspección de direcciones de red: MAC, IP o puerto origen y destino.
+ * Filtrado por aplicaciones: permite especificar las aplicaciones y reglas especificas para cada una de ellas.
+ *	Las distintas reglas de filtrado se aplican sobre el trafico de salida o de entrada en una determinada interfaz de red.
+ *	Registro o logs de filtrado de paquetes.
+
+Firewall
+--------------------
+
+###Iptables
+  
+ * Las reglas se agrupan en cadenas, predefinidas o definidas por el usuario:
+  - **Input:** Paquetes que entran al sistema.
+  - **Output:** Paquetes que salen del sistema.
+  - **Forward:** Paquetes que pasan por el sistema
  * Las cedenas se agrupan en tablas, cada tabla está asociada a un tipo de procesamiento de paquetes:
-  - Filter table: responsable de bloquear o  permitir un paquete. Contiene cadenas predefinidas para paquetes input, output, forward.
-  - Nat table: Responsable de configurar las reglas de reescritura de direcciones o puertos de los paquetes. Contiene cadenas predefinidas para.
-   * PREROUTING: Entran los paquetes entrantes antes de qure se consulte la tabla de ruteo local.
-   * POSTROUTING: Pasan los paquetes salientes después de la decisión de ruteo.
-   * OUTPUT: Limita el NAT a paquetes generados localmente.
-   * INPUT: Limita el NAT a paquetes destinados al sistema.
-  - Mangle table: Responsable de ajustar las opciones de los paquetes, como la calidad de servicio. Todos los paquetes pasan por esta tabla, contiene todos los tipos de cadenas predefinidas posibles.
+  - **Filter table:** responsable de bloquear o  permitir un paquete. Contiene cadenas predefinidas para paquetes input, output, forward.
+  - **Nat table:** Responsable de configurar las reglas de reescritura de direcciones o puertos de los paquetes. Contiene cadenas predefinidas para.
+   * **PREROUTING:** Entran los paquetes entrantes antes de qure se consulte la tabla de ruteo local.
+   * **POSTROUTING:** Pasan los paquetes salientes después de la decisión de ruteo.
+   * **OUTPUT:** Limita el NAT a paquetes generados localmente.
+   * **INPUT:** Limita el NAT a paquetes destinados al sistema.
+  - **Mangle table:** Responsable de ajustar las opciones de los paquetes, como la calidad de servicio. Todos los paquetes pasan por esta tabla, contiene todos los tipos de cadenas predefinidas posibles.
  
- ###Tipos de firewall
+###Tipos de firewall
  
  Según su ubicación:
-  * Firewalls basados en servidores: consta de una aplicación de firewall que se instala y ejecuta en un sistema operativo de red (NOS), que normalmente ofrece otra serie de servicios como enrutamiento, proxy, dns, dhcp, etc.
-  * Firewalls dedicados: son equipos que tienen instalada una aplicación especifica de cortafuegos.
-  * Firewalls integrados: se integran en un dispositivo hardware para ofrecer la funcionalidad de firewall. Como ejemplos encontramos switches o routers que integran funciones de cortafuegos.
-  * Firewalls personales: se instalan en los distintos equipos de la red de forma que los proteja individualmente de amenazas externas.
  
- Arquitecturas de cortafuegos
-  * Screening router: Como frontera entre la red privada y la red pública se encuentra un router que realiza tareas de filtrado.
-  * Dual Homed-Host: se dispone un equipo servidor que realizará tareas de filtrado y enrutamiento mediante al menos 2 tarjetas de red, esto permitirá una mayor flexibilidad en la configuración e instalación de aplicaciones de seguridad.
-  * Screened Host: Combina un router como equipo fronterizo exterior y un servidor proxy que filtrará y permitirá añadir reglas de filtrado en la aplicaciones más empleadas.
-  * Screened-subnet: Mediante l creación de una subred intermedia, denominada DMZ o zona desmilitarizada, entre la red externa y la red privada interna, permitirá tener 2 niveles de seguridad, uno algo menor en el cortafuegos más externo y uno de mayor nivel de seguridad en el cortafuegos de acceso a la red interna.
+  * **Firewalls basados en servidores:** consta de una aplicación de firewall que se instala y ejecuta en un sistema operativo de red (NOS), que normalmente ofrece otra serie de servicios como enrutamiento, proxy, dns, dhcp, etc.
+  * **Firewalls dedicados:** son equipos que tienen instalada una aplicación especifica de cortafuegos.
+  * **Firewalls integrados:** se integran en un dispositivo hardware para ofrecer la funcionalidad de firewall. Como ejemplos encontramos switches o routers que integran funciones de cortafuegos.
+  * **Firewalls personales:** se instalan en los distintos equipos de la red de forma que los proteja individualmente de amenazas externas.
+ 
+Arquitecturas de cortafuegos
+ 
+  * **Screening router:** Como frontera entre la red privada y la red pública se encuentra un router que realiza tareas de filtrado.
+  * **Dual Homed-Host:** se dispone un equipo servidor que realizará tareas de filtrado y enrutamiento mediante al menos 2 tarjetas de red, esto permitirá una mayor flexibilidad en la configuración e instalación de aplicaciones de seguridad.
+  * **Screened Host:** Combina un router como equipo fronterizo exterior y un servidor proxy que filtrará y permitirá añadir reglas de filtrado en la aplicaciones más empleadas.
+  * **Screened-subnet:** Mediante l creación de una subred intermedia, denominada DMZ o zona desmilitarizada, entre la red externa y la red privada interna, permitirá tener 2 niveles de seguridad, uno algo menor en el cortafuegos más externo y uno de mayor nivel de seguridad en el cortafuegos de acceso a la red interna.
+  
+###DMZ
+
+Durante el diseño de una red es importante determinar qué equipos ofrecerán servicios públicos y cuáles dberán ser invisibles al exterior.
+
+ * Se recomienda usar dos cortafuegos, para prevenir el acceso desde la red externa a la interna.
+ * El primero ("font-end") debe permitir el tráfico únicamente del exterior a la DMZ.
+ * El segundo ("Back-End") permite el tráfico únicamente desde la DMZ a la red inte
+
+Proxy
+------
+
+ * Es una aplicación que gestiona las conexsiones de red, sirviendo de intermediario entre las peticions de servicios que requieren los clientes, como HTTP, FTP, telnet, etc.
+ * Puede ofrecer diversas funcionalidades: control de acceso, regitro del tráfico, restricción a desterminados tipos de tráfico, mejora de rendimiento, anonimato de la comunicación, caché web, etc.
+ * Crea una miemoria caché de las peticiones y respuestas por parte de los servidores externos, para servir más rápidamente en conexiones siguientes que hayan sido solicitadas y respoondidas previamente, sin tener que acceder remotamente de nuevo a los servidores externos.
+ * Se conectan con el servidor remoto para comprobar quue la versión que tiene en caché sigue siendo la misma que la existen en el servidor remoto.
+ 
+Existen dos tipos de proxy atiendiendo a quién es el que quiere implementar la política:
+
+ * **Proxy local:** El que quiere implementar la política es el mismo que ace la petición. Se instala en el mismo eqpuipo que realiza la petición. Son muy usados para que el cliente pueda controlar el tráfico y establecer reglas de filtrado, por ejemplo para asegurar que no se revela información privada.
+ * **Proxy de red o proxy externo:** El que quiere implementar la política es una entidad externa. Se suelen usar para implementar cacheos.7
+
+####Ventajas:
+ * **Control:** El proxy hace el trabajo real, por tanto se pueden limitar  restringir los derechos de los usuarios.
+ * **Ahorro:** Solamente el proxy necesita los recursos necesarios para hacer el trabajo real. Por ejemplo: Capacidad y lógica de cómputo, IP externa, etc.
+ * **Velocidad:** Si varios clientes van a pedir el mismo recurso, el proxy puede hacer caché.
+ * **Filtrado:** El proxy puede negarse a responder algunas peticiones y detecta que están prohibidas.
+ * **Modificación:** Como intermediario que es, un proxy puede falsificar información, o modificarla siguiendo un algoritmo. Por ejemplo, para adaptar contenidos a dispositivos, modificar cabeceras de las peticiones o quitar javascript que se considere peligroso.
+ 
+
+####Desventajas:
+
+ * **Anonimato:** Si todos los usuarios se identifican como uno solo, es difícil que el recurso accedido pueda diferenciarlos. Pero esto puede ser inconveniente, por ejemplo cuando hay que hacer necesariamente la identificación.
+ * **Abuso:** Al estar dispuesto a recibir peticiones de muchos usuarios y responderlas, es posible que haga algún trabajo que no toque. Se debe controlar quién tiene acceso a sus servicios.
+ * **Carga:** Un proxy tiene que hacer el trabajo de muchos usuarios.
+ * **Intromisión:** Es un paso más entre origen y destino, y algunos usuarios pueden no querer passar por el proxu. Y menos si hace de caché y guarda copias de los datos.
+ * **Incoherente:** Es posible que de una respuesta antigua. (Ya no).
+ * **Irregularidad:** El hecho de que el proxy represente a más de un usuario da problemas cuando se presupone una comunicación directa entre 1 emisor y un receptor.
+ 
+####Tipos de proxy:
+
+ * **PRoxy caché WEb:** para una aplicación específica como el acceso a la web. Mantiene copias locales de los archivos más solicitados y los sirven bajo demanda, reduciendo las necesidades de acceso a internet. El proxy caché almacena el contenido en la caché de los protocolos HTTP, HTTPS, incluso FTP.
+ * **Proxy NAT:** Integra los servicios de traducción de direcciones de red y proxy.
+ * **Proxy transparente:** Normalmente, un proxy Web o NAT no es transparente a la aplicación cliente: debe ser configurada para usar el proxy, manualmente. Un proxy transparente combina un servidor proxy con NAT o con cortafuegos, de manera que las conexiones son redirigidas hacia el proxy
+ * **Proxy anónimo:** Permiten aumentar la privacidad y el anonimato de los clientes proxy, mediante una activia eliminación de características identificativas(IP, cookies, sessions, etc)
+ * **Proxy inverso:** Es un srevidor proxy instalado en una red con varios servidores web, sirviendo de intermediario a las peticiones externas, suponiendo una capa de seguridad previa, gestión y distribución de carga de las distintas peticiones externas, gestión de SSL o como caché de contenidos estáticos.
+ * **Proxy abierto:** Acepta peticiones desde cualquier ordenador, esté o no conectado a su red. En esta configuración el proxy ejecutará cualquier petición de cualquier ordenador que pueda conectarse a el, realizándola como sifuera una petición del proxy. Se usa como pasarela para el envío masivo de correos spam, muchos servidores, como los IRC o correos electrónicos, deniegan el acceso a estos proxys a sus servicios, usando normalmente listas negras.
+  

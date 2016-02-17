@@ -177,6 +177,17 @@ La configuración para permitir y limitar el trafico entre diferentes redes o á
 Firewall
 ----------
 
+ * Cuando una red corporativa se encuentra interconectada a una red pública, los peligros de ataque a sus servidores, routers y sistemas internos se multiplican.
+ * Las medidas de seguridad perimetral suponen la primera línea de defensa entre las redes públicas y corporativas o privadas.
+ * Un cortafuego o firewall es una aplicación o dispositivo diseñado para bloquear comunicaciones no autorizadas.
+
+La configuración para permitir y limitar el trafico entre diferentes redes o ámbitos de una red se realiza en base a un conjunto de normas y reglas. Sus características fundamentales son:
+
+ * **Filtrado de paquetes: de red en función de la inspección de direcciones de red:** MAC, IP o puerto origen y destino.
+ * **Filtrado por aplicaciones:** permite especificar las aplicaciones y reglas especificas para cada una de ellas.
+ * Las distintas reglas de filtrado se aplican sobre el trafico de salida o de entrada en una determinada interfaz de red.
+ * Registro o logs de filtrado de paquetes.
+ 
 ###Iptables
   
  * Las reglas se agrupan en cadenas, predefinidas o definidas por el usuario:

@@ -15,3 +15,21 @@ Introducción
     - Sistemas RAID de almacenamiento.
     - Centros de procesamiento de datos de respaldo, garantizando copias de seguridad en distintas ubicaciones geográficas.
    * **Redundancia en las comunicaciones:** Mediante conexiones de red redundantes e independientes, tanto de manera lógica como física (varios caminos, varios operadores, etc.). Para optimizar el uso de estas líneas, se realiza balanceo de carga.
+   * **Redundancia y distribución en el procesado:** Los clusters o agrupaciones de servidores permiten escalar la capacidad de procesamiento.
+   * **Independencia en la administración, configuración de aplicaciones y servicios:** Mediante la virtualización hoy en día podemos ofrecer de forma independiente servidores dedicados soportados bajo una misma máquina.
+
+Raid
+-----------
+
+Conjunto redundante de discos independientes, que hace referencia a un sistema de almacenamiento que usa múltiples mdiscos duros entre los que distribuye o replica los datos, con diferentes modalidades.
+La distribución de datos en varios discos puede ser gestionada por:
+
+ * **Hardware dedicado:** requiere al menos una controladora RAID específica, ya sea como una tarjeta de expansión independiente o integrada en la placa base.
+ * **Software:** El sistema operativo gestiona los disco del conjunto a través de una controladora de disco.
+ * **Híbridos:** Mediante controladoras RAID hardware baratas o controladora de disco sin características RAID, pero el sistema incorporta una aplicación de bajo nivel que permite construir RAID controlada por BIOS.
+
+Las configuraciones o niveles RAID más comunes son:
+
+ * **RAID 0 o data striping:** O distribuye los datos equitativamente entre dos o más discos sin información de paridad, no es redundante. Permite incrementar el rendimiento y crear un pequeño número de grandes discos virtuales a partir de un gran número de pequeños discos físicos.
+ * **RAID 1 o data mirroring:** Crea una copia exacta (O espejo) de un conjunto de datos en dos o más discos. Puede ser tan grande como el más pequeño de sus discos. El conjunto de comporta como un único disco, grabando la misma información en todos sus discos.
+ * **RAID 5:** Usa división de datos a nivel de bloques distribuyendo la inforamción de paridad entre todos los discos miembros del conjunto. En caso de fallo de alguno de ellos, será posible recuperar su inforamción a partir de contenida en el resto de discos. Necesita un mínimo de 3 discos.

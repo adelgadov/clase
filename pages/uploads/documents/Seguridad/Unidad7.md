@@ -33,3 +33,18 @@ Las configuraciones o niveles RAID más comunes son:
  * **RAID 0 o data striping:** O distribuye los datos equitativamente entre dos o más discos sin información de paridad, no es redundante. Permite incrementar el rendimiento y crear un pequeño número de grandes discos virtuales a partir de un gran número de pequeños discos físicos.
  * **RAID 1 o data mirroring:** Crea una copia exacta (O espejo) de un conjunto de datos en dos o más discos. Puede ser tan grande como el más pequeño de sus discos. El conjunto de comporta como un único disco, grabando la misma información en todos sus discos.
  * **RAID 5:** Usa división de datos a nivel de bloques distribuyendo la inforamción de paridad entre todos los discos miembros del conjunto. En caso de fallo de alguno de ellos, será posible recuperar su inforamción a partir de contenida en el resto de discos. Necesita un mínimo de 3 discos.
+
+Balanceo de carga
+------------------------
+
+Dispositivo hardware o software que se conecta a un conjunto de servidores para asignar y repartir las peticiones de clientes.
+Para ello se aplica una serie de algoritmos para repartir la carga de forma equilibrada, siendo muy popular el algoritmo Round Robin.
+
+ * Round Robin es un método para seleccionar los elementos de un grupo de forma equitativa y en orden racional.
+ * Normalmente se comienza por el primer elemento de una lista hasta llegar al último, y empezar de nuevo desde el primero.
+ * El algoritmo es conocido en otros campos, donde cada persona toma una parte de un algo compartido en cantidades parejas.
+ * Un ejemplo de Round Robin, sería el sistema de turnos o de cita previa.
+ * En el caso de operaciones computacionales, para ejecutar procesos de manera concurrente y utilizar equitativamente los recursos del equipo, se limita cada proceso a un pequeo periodo (quantum), se suspende y se da paso al siguiente.
+
+Los balanceadores permiten repartir la carga y escluir conexiones caídas.
+Por ejemplo, detectará cuando un servidor DNS está caído  excluirá las conexiones que tengan como origen las IP que éste resuelve. Asimismo, las peticiones con destino el servidor DNS caído, se redireccionarán.

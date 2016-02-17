@@ -30,6 +30,7 @@
 * [Unidad 4](pages/uploads/documents/Seguridad/Unidad4.md)
 * [Unidad 5](pages/uploads/documents/Seguridad/Unidad5.md)
 * [Unidad 6](pages/uploads/documents/Seguridad/Unidad6.md)
+* [Unidad 7](pages/uploads/documents/Seguridad/Unidad7.md)
 * [Glosario](pages/uploads/documents/Seguridad/Glosario.md)
 
 [Inglés]()

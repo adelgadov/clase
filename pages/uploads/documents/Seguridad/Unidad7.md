@@ -48,3 +48,28 @@ Para ello se aplica una serie de algoritmos para repartir la carga de forma equi
 
 Los balanceadores permiten repartir la carga y escluir conexiones caídas.
 Por ejemplo, detectará cuando un servidor DNS está caído  excluirá las conexiones que tengan como origen las IP que éste resuelve. Asimismo, las peticiones con destino el servidor DNS caído, se redireccionarán.
+
+Virtualización
+------------------
+
+ * Permite la ejecución simultánea de distintos sistemas operativos sobre una aplicación ejecutada y soportada bajo un equipo y un sistema operativo determinado.
+ * Se trata de una capa software que maneja, gestiona y arbitra los recursos del equipo (CPU, memoria, red y almacenamiento), repartiéndolos entre las máquinas virtuales.
+ * Existen diferentes software de este tipo, siendo los más conocidos VMWare, Virtual Box o Virtual PC.
+ * También hay sistemas de virtualización de software libre, como OpenVZ o Xen.
+
+El proceso para poder ejecutar distintos sistemas operativos se resume en:
+
+ * Crear y configurar los recursos hardware que darán soporte a la instalación de un determinado sistema operativo.
+ * Una vez creada la máquina virtual soporte, instalar mediante una imagen ISO o un CD/DVD de instalación el sistema operativo.
+ * Arrancar y utilizar el sistema operativo, pudiendo instalar aplicaciones, guardar datos de forma independiente al sistema operativo que soporte el software gestor de máquinas virtuales.
+
+Permite independizar la administración de servidores bajo una misma máquina física, aportando numerosas ventajas.
+
+ * Ahorro de costes.
+ * Crecimiento más flexible.
+ * Administración simplificada.
+ * Aprovechamiento de aplicaciones antiguas.
+ * Centralización de tareas de mantenimiento.
+ * Disminuye tiempos de parada.
+ * Mejor gestión de recursos.
+ * Balanceo de recursos.

@@ -75,3 +75,45 @@ Los servidores DNS guardan en cache sus registros durante un tiempo determinado.
 
 A la hora de contestar, contesta el servidor DNS más próximo, mediante el protocolo (Round Trip Time) RTT
 A la hora de contestar cada zona DNS delega en otra hasta dar con la información.
+
+
+
+Fichero configuración DNS.
+----------------------------
+
+
+###Configuración de rutas
+
+**/etc/bind/named.conf.local**
+
+Especificar las zonas de búsqueda directa e inversa del servicio DNS. El dominio de la zona directa y la subred de la zona inversa. También incluir qué tipo de servicio es (maestro o esclavo) y en que archivos hará la búsqueda de nombres.
+
+![](images/conf1.PNG)
+
+
+###Zona Directa
+
+**/etc/bind/db.asir.da.host**
+
+Este archivo contiene las tablas de búsqueda directa. Las primeras líneas son unos parámetros relacionados con la actualización del DNS (número de serie y periodos de actuación). La siguiente línea indica quién es el servidor primario (NS = Name Server). Las siguientes líneas especifican las @IP’s de los diferentes PC’s componentes del dominio (A = Address).
+
+![](images/conf2.PNG)
+
+
+###Zona inversa
+
+
+**/etc/bind/db.192.168.224.rev**
+
+Este archivo contiene las tablas de búsqueda inversa
+
+![](images/conf3.PNG)
+
+
+###Tipos de registro DNS
+
+* **NS:** Especifica el nombre del dominio del servidor DNS.
+* **A:** Convierte nombres de host en direcciones IP.
+* **CNAME:** Crea nombres de host adicionales (ALIAS).
+* **MX:** Asocia un nombre de cominio a una lista de servidores de correo.
+* **PTR:** Traduce una IP a un nombre.
